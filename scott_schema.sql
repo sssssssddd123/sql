@@ -35,13 +35,13 @@ INSERT INTO EMP VALUES
 INSERT INTO EMP VALUES
 (7782,'CLARK','MANAGER',7839,to_date('9-6-1981','dd-mm-yyyy'),2450,NULL,10);
 INSERT INTO EMP VALUES
-(7788,'SCOTT','ANALYST',7566,to_date('13-7-87', 'dd-mm-yyyy')-85,3000,NULL,20);
+(7788,'SCOTT','ANALYST',7566,to_date('13-7-1987', 'dd-mm-yyyy')-85,3000,NULL,20);
 INSERT INTO EMP VALUES
 (7839,'KING','PRESIDENT',NULL,to_date('17-11-1981','dd-mm-yyyy'),5000,NULL,10);
 INSERT INTO EMP VALUES
 (7844,'TURNER','SALESMAN',7698,to_date('8-9-1981','dd-mm-yyyy'),1500,0,30);
 INSERT INTO EMP VALUES
-(7876,'ADAMS','CLERK',7788,to_date('13-7-87', 'dd-mm-yyyy')-51,1100,NULL,20);
+(7876,'ADAMS','CLERK',7788,to_date('13-7-1987', 'dd-mm-yyyy')-51,1100,NULL,20);
 INSERT INTO EMP VALUES
 (7900,'JAMES','CLERK',7698,to_date('3-12-1981','dd-mm-yyyy'),950,NULL,30);
 INSERT INTO EMP VALUES
@@ -255,7 +255,7 @@ insert into student values (
 
 commit;
 
-drop table emp2 cascade constraint ;
+drop table emp2 cascade constraint purge;
 
 CREATE TABLE EMP2 (
  EMPNO       NUMBER  PRIMARY KEY,
@@ -291,7 +291,7 @@ INSERT INTO EMP2 VALUES (20000119,'Harrison Ford',TO_DATE('19801105','YYYYMMDD')
 INSERT INTO EMP2 VALUES (20000210,'Clint Eastwood',TO_DATE('19801215','YYYYMMDD'),'1005','Intern','031)345-3456','Reading book', 20000000,'',19960303);
 COMMIT;
 
-drop table dept2 cascade constraint;
+drop table dept2 cascade constraint purge;
 
 CREATE TABLE DEPT2 (
  DCODE   VARCHAR2(06)  PRIMARY KEY,
