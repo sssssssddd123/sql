@@ -1,4 +1,4 @@
-
+DROP TABLE posts purge;
 -- -> id
 -- -> pw
 -- -> pwCheck
@@ -21,6 +21,20 @@ CREATE TABLE users(
 
 CREATE TABLE posts(
     postno number(3) PRIMARY KEY,
+    id VARCHAR2(20) NOT NULL,
+    title VARCHAR2(20) NOT NULL,
+    content VARCHAR2(100) NOT NULL
+    );
+--------------------------------------------------------------------------------
+
+-- -> postno
+-- -> id
+-- -> title
+-- -> content
+-- -> coment
+
+CREATE TABLE posts(
+    id VARCHAR2(20) PRIMARY KEY,
     id VARCHAR2(20) NOT NULL,
     title VARCHAR2(20) NOT NULL,
     content VARCHAR2(100) NOT NULL
